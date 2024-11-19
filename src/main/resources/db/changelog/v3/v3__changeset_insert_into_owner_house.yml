@@ -1,0 +1,68 @@
+databaseChangeLog:
+  #  - preConditions:
+  #      - onFile: MARK_RAN
+  #        tableExists:
+  #        tableName: persons
+  - changeSet:
+      id: insert_into_owner_house
+      author: Klimovich
+      changes:
+        - insert:
+            tableName: owner_house
+            columns:
+              - column:
+                  name: owner_id
+                  value: 3
+              - column:
+                  name: house_id
+                  value: 5
+
+        - insert:
+            tableName: owner_house
+            columns:
+              - column:
+                  name: owner_id
+                  value: 1
+              - column:
+                  name: house_id
+                  value: 1
+        - insert:
+            tableName: owner_house
+            columns:
+              - column:
+                  name: owner_id
+                  value: 5
+              - column:
+                  name: house_id
+                  value: 2
+        - insert:
+            tableName: owner_house
+            columns:
+              - column:
+                  name: owner_id
+                  value: 2
+              - column:
+                  name: house_id
+                  value: 3
+
+        - insert:
+            tableName: owner_house
+            columns:
+              - column:
+                  name: owner_id
+                  value: 4
+              - column:
+                  name: house_id
+                  value: 4
+
+      #         - insert:
+      #             tableName: owner_house
+      #             columns:
+      #               - column:
+      #                   name: owner_id
+      #                   value: 1
+      #               - column:
+      #                   name: house_id
+      #                   value: 6
+
+

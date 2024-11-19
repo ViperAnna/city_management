@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+<!--    <changeSet id="create_cars_with_ref" author="Klimovich">-->
+<!--        <preConditions onFail="MARK_RAN">-->
+<!--            <not>-->
+<!--                <tableExists tableName="cars"/>-->
+<!--            </not>-->
+<!--        </preConditions>-->
+
+<!--        <createTable tableName="cars">-->
+<!--            <column name="id" type="bigint" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="brand" type="varchar(30)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="owner_id" type="bigint">-->
+<!--                <constraints foreignKeyName="fk_cars_owner_id"-->
+<!--                             referencedTableName="persons"-->
+<!--                             referencedColumnNames="id"-->
+<!--                             nullable="false"-->
+<!--                             deleteCascade="true"/>-->
+<!--            </column>-->
+
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+    <changeSet id="alter_table_cars_add_ref" author="Klimovich">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="cars"/>
+        </preConditions>
+        <addColumn tableName="cars">
+            <column name="owner_id" type="bigint">
+                <constraints foreignKeyName="fk_cars_on_owner"
+                             referencedTableName="persons"
+                             referencedColumnNames="id"
+                             nullable="false"
+                             deleteCascade="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+
+</databaseChangeLog>

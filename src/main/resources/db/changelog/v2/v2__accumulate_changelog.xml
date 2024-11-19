@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <include file="v2__changeset_create_persons_table_with_ref.xml" relativeToChangelogFile="true"/>
+    <include file="v2__changeset_create_passports_with_ref.xml" relativeToChangelogFile="true"/>
+    <include file="v2__changeset_create_cars_with_ref.xml" relativeToChangelogFile="true"/>
+<!--    <include file="v2__changeset_houses_with_ref" relativeToChangelogFile="true"/>-->
+    <include file="v2__changeset_create_table_owner_house.xml" relativeToChangelogFile="true"/>
+
+
+
+</databaseChangeLog>

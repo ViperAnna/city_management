@@ -1,0 +1,105 @@
+databaseChangeLog:
+  #  - preConditions:
+  #      - onFile: MARK_RAN
+  #        tableExists:
+  #        tableName: cars
+  - changeSet:
+      id: insert_data_into_cars
+      author: Klimovich
+      changes:
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: brand
+                  value: Ford
+              - column:
+                  name: owner_id
+                  value: 3
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: brand
+                  value: BMW
+              - column:
+                  name: owner_id
+                  value: 4
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: brand
+                  value: Audi
+              - column:
+                  name: owner_id
+                  value: 1
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: brand
+                  value: Lamborghini
+              - column:
+                  name: owner_id
+                  value: 2
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: brand
+                  value: Honda
+              - column:
+                  name: owner_id
+                  value: 5
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: brand
+                  value: Shelby
+              - column:
+                  name: owner_id
+                  value: 2
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: brand
+                  value: Tesla
+              - column:
+                  name: owner_id
+                  value: 2
+        - insert:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: brand
+                  value: Lada
+              - column:
+                  name: owner_id
+                  value: 4

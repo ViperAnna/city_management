@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+<!--    <changeSet id="create_persons_table_with_ref" author="Klimovich">-->
+
+<!--        <preConditions onFail="MARK_RAN">-->
+<!--            <not>-->
+<!--                <tableExists tableName="persons"/>-->
+<!--            </not>-->
+<!--        </preConditions>-->
+
+<!--        <sql>CREATE TYPE IF NOT EXISTS gender AS ENUM ('male', 'female');</sql>-->
+
+<!--        <createTable tableName="persons">-->
+<!--            <column name="id" type="bigint" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="name" type="varchar(30)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="surname" type="varchar(30)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+
+<!--            <column name="gender" type="gender">-->
+<!--            </column>-->
+<!--            <column name="passport_id" type="bigint">-->
+<!--                <constraints nullable="false"-->
+<!--                             referencedTableName="passports"-->
+<!--                             referencedColumnNames="owner_id"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+
+<!--    </changeSet>-->
+
+    <changeSet id="alter_table_persons_add_ref" author="Klimovich">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="persons"/>
+        </preConditions>
+        <addColumn tableName="persons">
+            <column name="number_of_passport" type="bigint">
+            </column>
+        </addColumn>
+
+<!--        <addColumn tableName="persons">-->
+<!--            <column name="number_Of_Passport" type="bigint">-->
+<!--                <constraints referencedTableName="passports"-->
+<!--                             referencedColumnNames="id"-->
+<!--                             nullable="false"-->
+<!--                             unique="true"-->
+<!--                             foreignKeyName="fk_passport_owner"-->
+<!--                             deleteCascade="true"/>-->
+<!--            </column>-->
+<!--        </addColumn>-->
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,47 @@
+#spring.datasource.url=jdbc:postgresql://localhost:5432/city_management
+#spring.datasource.username=postgres
+#spring.datasource.password=admin
+#
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=update
+#
+#spring.liquibase.enabled=true
+#spring.liquibase.base-
+#
+##spring.jpa.database=postgresql
+##spring.jpa.database-platform=org.hibernate.dialect.Dialect
+##spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+#
+##spring.jpa.hibernate.ddl-auto=create-drop
+#
+#
+#
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/city_management
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: db/changelog/main_changelog.xml
+    enabled: true
+
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type:
+#            descriptor:
+#              sql:
+#                BasicTypeDescriptor: TRACE
+#        hibernate: DEBUG
+#      liquibase: DEBUG
+

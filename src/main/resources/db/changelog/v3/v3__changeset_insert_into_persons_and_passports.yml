@@ -1,0 +1,318 @@
+databaseChangeLog:
+  #  - preConditions:
+  #      - onFile: MARK_RAN
+  #        tableExists:
+  #        tableName: persons
+  - changeSet:
+      id: insert_into_persons
+      author: Klimovich
+      changes:
+        #----------------------Person #1
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: Peter
+              - column:
+                  name: surname
+                  value: Parker
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 1234567
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 1
+
+              - column:
+                  name: number_of_passport
+                  value: 1234567
+
+#        ----------------------Person #2
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Tony
+              - column:
+                  name: surname
+                  value: Stark
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 7654321
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 2
+
+              - column:
+                  name: number_of_passport
+                  value: 7654321
+
+        #----------------------Person #3
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: Steve
+              - column:
+                  name: surname
+                  value: Rogers
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 2345678
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 3
+
+              - column:
+                  name: number_of_passport
+                  value: 2345678
+
+        #----------------------Person #4
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: Natasha
+              - column:
+                  name: surname
+                  value: Romanoff
+              - column:
+                  name: gender
+                  value: female
+              - column:
+                  name: number_of_passport
+                  value: 3456789
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 4
+
+              - column:
+                  name: number_of_passport
+                  value: 3456789
+
+        #----------------------Person #5
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: Bruce
+              - column:
+                  name: surname
+                  value: Banner
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 5678908
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 5
+
+              - column:
+                  name: number_of_passport
+                  value: 5678908
+
+        #----------------------Person #6
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: "T'Challa"
+              - column:
+                  name: surname
+                  value: Wakanda
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 8870923
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 6
+
+              - column:
+                  name: number_of_passport
+                  value: 8870923
+
+        #----------------------Person #7
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: Wanda
+              - column:
+                  name: surname
+                  value: Maximoff
+              - column:
+                  name: gender
+                  value: female
+              - column:
+                  name: number_of_passport
+                  value: 4392064
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 7
+
+              - column:
+                  name: number_of_passport
+                  value: 4392064
+
+        #----------------------Person #8
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: name
+                  value: Stephen
+              - column:
+                  name: surname
+                  value: Strange
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 6545530
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 8
+
+              - column:
+                  name: number_of_passport
+                  value: 6545530
+
+        #----------------------Person #9
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: name
+                  value: Shuri
+              - column:
+                  name: surname
+                  value: Wakanda
+              - column:
+                  name: gender
+                  value: female
+              - column:
+                  name: number_of_passport
+                  value: 4323320
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 9
+
+              - column:
+                  name: number_of_passport
+                  value: 4323320
+
+        #----------------------Person #10
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: name
+                  value: James
+              - column:
+                  name: surname
+                  value: Howlett
+              - column:
+                  name: gender
+                  value: male
+              - column:
+                  name: number_of_passport
+                  value: 2090812
+
+        - insert:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  value: 10
+
+              - column:
+                  name: number_of_passport
+                  value: 2090812

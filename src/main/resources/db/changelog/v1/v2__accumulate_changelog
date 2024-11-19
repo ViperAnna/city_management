@@ -1,0 +1,7 @@
+--liquibase formatted sql
+--changeset klimovich:create-all-table
+
+--include file:db/changelog/v1/v1__changeset_create_persons_table.sql
+--include file:db/changelog/v1/v1__changeset_create_passports_table.sql
+--include file:db/changelog/v1/v1__changeset_create_houses_table.sql
+--include file:db/changelog/v1/v1__changeset_create_cars_table.sql

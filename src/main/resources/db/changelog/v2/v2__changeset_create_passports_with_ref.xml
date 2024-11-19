@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+<!--    <changeSet id="create_passports_table_with_ref" author="Klimovich">-->
+<!--        <preConditions onFail="MARK_RAN">-->
+<!--            <not>-->
+<!--                <tableExists tableName="passports"/>-->
+<!--            </not>-->
+<!--        </preConditions>-->
+<!--        <createTable tableName="passports">-->
+<!--            <column name="person_id" type="bigint">-->
+<!--                <constraints nullable="false"-->
+<!--                             primaryKey="true"-->
+<!--                             foreignKeyName="person_id"-->
+<!--                             referencedTableName="persons"-->
+<!--                             referencedColumnNames="id"-->
+<!--                />-->
+<!--            </column>-->
+<!--            <column name="number_of_passport" type="bigint">-->
+<!--                <constraints nullable="false" unique="true"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+    <changeSet id="alter_table_passports_add_ref" author="Klimovich">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="passports"/>
+        </preConditions>
+        <addForeignKeyConstraint baseTableName="passports"
+                                 baseColumnNames="id"
+                                 constraintName="person_id"
+                                 referencedTableName="persons"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,145 @@
+databaseChangeLog:
+  #  - preConditions:
+  #      - onFile: MARK_RAN
+  #        tableExists:
+  #        tableName: houses
+  - changeSet:
+      id: insert_into_houses
+      author: Klimovich
+      changes:
+        - insert:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: street
+                  value: Ingram
+              - column:
+                  name: number_of_house
+                  value: 20
+              - column:
+                  name: zip_code
+                  value: 654327
+
+        - insert:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: street
+                  value: Greenwich
+              - column:
+                  name: number_of_house
+                  value: 5
+              - column:
+                  name: zip_code
+                  value: 739745
+
+
+        - insert:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: street
+                  value: Malibu
+              - column:
+                  name: number_of_house
+                  value: 1
+              - column:
+                  name: zip_code
+                  value: 982634
+
+
+        - insert:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: street
+                  value: 'New York'
+              - column:
+                  name: number_of_house
+                  value: 15
+              - column:
+                  name: zip_code
+                  value: 439086
+
+
+        - insert:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: street
+                  value: 'Artic ice'
+              - column:
+                  name: number_of_house
+                  value: 1
+              - column:
+                  name: zip_code
+                  value: 888888
+
+#  - changeSet:
+#      id: insert_into_houses
+#      author: Klimovich
+#      changes:
+#        - insert:
+#            tableName: houses
+#            columns:
+#              - column:
+#                  name: id
+#                  value: 1
+#              - column:
+#                  name: address
+#                  value: '("Ingram ", 20, 654327)'
+#
+#        - insert:
+#            tableName: houses
+#            columns:
+#              - column:
+#                  name: id
+#                  value: 2
+#              - column:
+#                  name: address
+#                  value: '("Greenwich ", 5, 739745)'
+#
+#        - insert:
+#            tableName: houses
+#            columns:
+#              - column:
+#                  name: id
+#                  value: 3
+#              - column:
+#                  name: address
+#                  value: '("Malibu", 1, 982634)'
+#
+#        - insert:
+#            tableName: houses
+#            columns:
+#              - column:
+#                  name: id
+#                  value: 4
+#              - column:
+#                  name: address
+#                  value: '("New York", 15, 439086)'
+#
+#        - insert:
+#            tableName: houses
+#            columns:
+#              - column:
+#                  name: id
+#                  value: 5
+#              - column:
+#                  name: address
+#                  value: '("Artic ice ", 1, 888888)'

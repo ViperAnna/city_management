@@ -1,0 +1,29 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<databaseChangeLog-->
+<!--        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"-->
+<!--        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-->
+<!--        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">-->
+
+<!--&lt;!&ndash;    <changeSet id="create_houses_with_ref" author="Klimovich">&ndash;&gt;-->
+<!--&lt;!&ndash;        <preConditions onFail="MARK_RAN">&ndash;&gt;-->
+<!--&lt;!&ndash;            <not>&ndash;&gt;-->
+<!--&lt;!&ndash;                <tableExists tableName="houses"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </not>&ndash;&gt;-->
+<!--&lt;!&ndash;        </preConditions>&ndash;&gt;-->
+<!--&lt;!&ndash;        <createTable tableName="houses">&ndash;&gt;-->
+<!--&lt;!&ndash;            <column name="id" type="bigint" autoIncrement="true">&ndash;&gt;-->
+<!--&lt;!&ndash;                <constraints primaryKey="true" nullable="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </column>&ndash;&gt;-->
+<!--&lt;!&ndash;            <column name="street" type="varchar(30)">&ndash;&gt;-->
+<!--&lt;!&ndash;                <constraints nullable="false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </column>&ndash;&gt;-->
+<!--&lt;!&ndash;            <column name="number_of_house" type="bigint(5)">&ndash;&gt;-->
+<!--&lt;!&ndash;            </column>&ndash;&gt;-->
+<!--&lt;!&ndash;            <column name="zip_code" type="bigint(5)">&ndash;&gt;-->
+<!--&lt;!&ndash;                <constraints nullable="false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </column>&ndash;&gt;-->
+<!--&lt;!&ndash;        </createTable>&ndash;&gt;-->
+<!--&lt;!&ndash;    </changeSet>&ndash;&gt;-->
+
+<!--</databaseChangeLog>-->

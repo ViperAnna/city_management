@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+      file: v3__changeset_insert_into_persons_and_passports.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: v3__changeset_insert_into_houses.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: v3__changeset_insert_into_cars.yml
+      relativeToChangelogFile: true
+  - include:
+      file: v3__changeset_insert_into_owner_house.yml
+      relativeToChangelogFile: true

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="add_column_to_table_persons" author="Klimovich">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="persons"/>
+        </preConditions>
+        <addColumn tableName="persons">
+            <column name="balance" type="JAVA.SQL.TYPES.NUMERIC(19, 2)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+
+        <update tableName="persons">
+            <column name="balance" value="0.00"/>
+        </update>
+
+        <addNotNullConstraint tableName="persons" columnName="balance"/>
+    </changeSet>
+</databaseChangeLog>
