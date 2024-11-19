@@ -15,6 +15,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "CAR_INSURANCES")
 public class CarInsurance {
+    //checkout test
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
